@@ -18,8 +18,7 @@ public class Main extends JComponent implements ActionListener
     private Color backgroundColor = Color.red;
     private MyTriangle myTriangle;
 
-    private static final int WIDTH = 800;
-    private static final int HEIGHT = 600;
+    private static final int WIDTH = 800, HEIGHT = 600;
     private double theta = 0;
     private static final float BORDER = 3;
 
