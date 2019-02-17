@@ -12,7 +12,8 @@ public class MyTriangle extends Canvas implements Shape {
     private Color borderColor;
     private Color backgroundColor;
     private double theta;
-    public MyTriangle(Color clr1,Color clr2,double theta,int []xPoints,int []yPoints,int numberOfPoints)
+    
+    public MyTriangle(Color clr1, Color clr2, double theta, int [] xPoints, int [] yPoints, int numberOfPoints)
     {
         this.xPoints=xPoints;
         this.yPoints=yPoints;
@@ -20,22 +21,22 @@ public class MyTriangle extends Canvas implements Shape {
         this.theta=theta;
         backgroundColor=clr2;
         borderColor=clr1;
-        this.centerX = (xPoints[0]+xPoints[1]+xPoints[2])/3;
-        this.centerY = (yPoints[0]+yPoints[1]+yPoints[2])/3;
+        this.centerX = (xPoints[0] + xPoints[1] + xPoints[2]) / 3;
+        this.centerY = (yPoints[0] + yPoints[1] + yPoints[2]) / 3;
     }
+    
     @Override
-
     public void paint(Graphics graphics)
     {
         Graphics2D graphics2D = (Graphics2D) graphics;
-        AffineTransform affineTransform = AffineTransform.getRotateInstance(this.theta,this.centerX,this.centerY);
+        AffineTransform affineTransform = AffineTransform.getRotateInstance(this.theta, this.centerX, this.centerY);
         graphics2D.setTransform(affineTransform);
         graphics2D.setColor(backgroundColor);
-        graphics2D.fillPolygon(xPoints,yPoints,n);
+        graphics2D.fillPolygon(xPoints, yPoints,n);
         graphics2D.setColor(borderColor);
-        graphics2D.drawPolygon(xPoints,yPoints,n);
-
+        graphics2D.drawPolygon(xPoints, yPoints,n);
     }
+    
     @Override
     public Rectangle2D getBounds2D() {
         return null;
