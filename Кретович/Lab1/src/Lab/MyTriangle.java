@@ -25,6 +25,11 @@ public class MyTriangle extends Canvas implements Shape {
         this.centerY = (yPoints[0] + yPoints[1] + yPoints[2]) / 3;
     }
     
+    public void setTheta(double theta)
+    {
+        this.theta=theta;
+    }
+    
     @Override
     public void paint(Graphics graphics)
     {
