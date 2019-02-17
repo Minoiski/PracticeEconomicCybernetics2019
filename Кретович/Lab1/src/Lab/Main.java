@@ -15,13 +15,13 @@ public class Main extends JComponent implements ActionListener
     private static final int [] yPoints = new int [] {200, 114, 250};
     private int n = 3;
     private Color borderColor = Color.green;
-    private Color backgroundColor = Color.red;
-    private MyTriangle myTriangle;
+    private Color backgroundColor = Color.red; 
     
     private double theta = 0;
     private static final int WIDTH = 800, HEIGHT = 600;
     private static final float BORDER = 3;
     private final static double ROTATE_ANGLE = Math.PI / 180;
+    private MyTriangle myTriangle = new MyTriangle(borderColor, backgroundColor, theta, xPoints, yPoints, n);
     
     private Timer timer;
 
@@ -39,6 +39,7 @@ public class Main extends JComponent implements ActionListener
     @Override
     public void actionPerformed(ActionEvent arg0)
     {
+        myTriangle.setTheta(theta);
         repaint();
     }
 
@@ -47,7 +48,6 @@ public class Main extends JComponent implements ActionListener
     {
         Graphics2D graphics2D = (Graphics2D) g;
         graphics2D.setStroke(new BasicStroke(BORDER));
-        myTriangle = new MyTriangle(borderColor, backgroundColor, theta, xPoints, yPoints, n);
         myTriangle.paint(graphics2D);
         theta += ROTATE_ANGLE;
     }
