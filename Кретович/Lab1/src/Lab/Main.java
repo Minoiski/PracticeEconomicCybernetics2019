@@ -25,7 +25,7 @@ public class Main extends JComponent implements ActionListener
 
     private Timer timer;
 
-    private final double ROTATE_ANGLE = Math.PI / 180;
+    private final static double ROTATE_ANGLE = Math.PI / 180;
 
     private Main(int delay)
     {
