@@ -11,15 +11,12 @@ import javax.swing.Timer;
 
 public class Main extends JComponent implements ActionListener
 {
-
-    private int[]xPoints={200,250,400};
-    private int[]yPoints={200,114,250};
-    private int n=3;
+    private int [] xPoints = {200, 250, 400};
+    private int [] yPoints = {200, 114, 250};
+    private int n = 3;
     private Color borderColor = Color.green;
     private Color backgroundColor = Color.red;
-
     private MyTriangle myTriangle;
-
 
     private static final int WIDTH = 800;
     private static final int HEIGHT = 600;
@@ -52,7 +49,7 @@ public class Main extends JComponent implements ActionListener
     {
         Graphics2D graphics2D = (Graphics2D) g;
         graphics2D.setStroke(new BasicStroke(BORDER));
-        myTriangle = new MyTriangle(borderColor, backgroundColor,theta,xPoints,yPoints,n);
+        myTriangle = new MyTriangle(borderColor, backgroundColor, theta, xPoints, yPoints, n);
         myTriangle.paint(graphics2D);
         theta += ROTATE_ANGLE;
     }
