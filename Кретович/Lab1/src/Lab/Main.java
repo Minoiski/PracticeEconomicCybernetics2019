@@ -17,14 +17,13 @@ public class Main extends JComponent implements ActionListener
     private Color borderColor = Color.green;
     private Color backgroundColor = Color.red;
     private MyTriangle myTriangle;
-
-    private static final int WIDTH = 800, HEIGHT = 600;
+    
     private double theta = 0;
+    private static final int WIDTH = 800, HEIGHT = 600;
     private static final float BORDER = 3;
-
-    private Timer timer;
-
     private final static double ROTATE_ANGLE = Math.PI / 180;
+    
+    private Timer timer;
 
     private Main(int delay)
     {
