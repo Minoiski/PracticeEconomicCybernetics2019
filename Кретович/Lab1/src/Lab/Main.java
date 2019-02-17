@@ -11,8 +11,8 @@ import javax.swing.Timer;
 
 public class Main extends JComponent implements ActionListener
 {
-    private int [] xPoints = {200, 250, 400};
-    private int [] yPoints = {200, 114, 250};
+    private static final int [] xPoints = new int [] {200, 250, 400};
+    private static final int [] yPoints = new int [] {200, 114, 250};
     private int n = 3;
     private Color borderColor = Color.green;
     private Color backgroundColor = Color.red;
