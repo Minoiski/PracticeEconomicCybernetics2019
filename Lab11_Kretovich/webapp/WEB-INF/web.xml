@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+
+    <display-name>Golden_State</display-name>
+
+    <!--<servlet>-->
+    <!--<servlet-name>ID_Servlet</servlet-name>-->
+    <!--<servlet-class>servlets.ID_Servlet</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>ID_Servlet</servlet-name>-->
+    <!--<url-pattern>/</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+
+    <servlet>
+        <servlet-name>UserViewServlet</servlet-name>
+        <servlet-class>servlets.UserViewServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserViewServlet</servlet-name>
+        <url-pattern>/user/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserCreateServlet</servlet-name>
+        <servlet-class>servlets.UserCreateServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserCreateServlet</servlet-name>
+        <url-pattern>/user/create</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserEditServlet</servlet-name>
+        <servlet-class>servlets.UserEditServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserEditServlet</servlet-name>
+        <url-pattern>/user/edit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserDeleteServlet</servlet-name>
+        <servlet-class>servlets.UserDeleteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserDeleteServlet</servlet-name>
+        <url-pattern>/user/delete</url-pattern>
+    </servlet-mapping>
+
+</web-app>
